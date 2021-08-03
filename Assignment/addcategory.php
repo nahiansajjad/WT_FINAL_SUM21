@@ -5,16 +5,21 @@
 ?>
 
 
-		<h5 ><?php echo $err_db;?></h5>
-		<form method="post" action="" >
+		<!--addproduct starts -->
+	<div class="center">
+	<h5 class="text-danger"><?php echo $err_db;?></h5>
+		<form  action="" method="post" class="form-horizontal form-material">
+			<div class="form-group">
+				<h4 class="text">Name:</h4> 
+				<input type="text" name ="name" onfocusout="checkname(this)" class="form-control">
+			</div>
 			
-				<h4 >Name:</h4> 
-				<input type="text" name="name" value="<?php echo $name;?>" >
-			<span><?php echo $err_name;?></span>
-			
-		
-				<input type="submit" name="add_category" value="Add Category" >
-			
+			<div class="form-group text-center">
+				
+				<input type="submit" name = "add_category" class="btn btn-success" value="Add Category" class="form-control">
+			</div>
 		</form>
-
-		<?php include 'main_footer.php';?>
+	</div>
+<script src="js/category.js"></script>
+<!--addproduct ends -->
+<?php include 'main_footer.php';?>
